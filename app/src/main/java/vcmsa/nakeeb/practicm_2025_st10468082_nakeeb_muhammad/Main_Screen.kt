@@ -54,7 +54,7 @@ class Main_Screen : AppCompatActivity() {
 
           }
           btnSongInfo.setOnClickListener {
-              intent = Intent(this, Detailed_View_Screen::class.java)
+              val intent = Intent(this, Detailed_View_Screen::class.java)
               startActivity(intent)
               finish()
 
@@ -62,7 +62,7 @@ class Main_Screen : AppCompatActivity() {
 
           btnExit.setOnClickListener {
               // when user clicks exit button go back to login screen
-              intent = Intent(this, MainActivity::class.java)
+              val intent = Intent(this, MainActivity::class.java)
               startActivity(intent)
               finish()
 

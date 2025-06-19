@@ -67,7 +67,7 @@ class Detailed_View_Screen : AppCompatActivity() {
 
             btnReturnMenu.setOnClickListener {
                 // when user clicks return to menu button go back to main screen
-                intent = Intent(this, Main_Screen::class.java)
+                val intent = Intent(this, Main_Screen::class.java)
                 startActivity(intent)
                 finish()
             }

@@ -46,11 +46,10 @@ class MainActivity : AppCompatActivity() {
                   Toast.makeText(this, "Please enter username and password", Toast.LENGTH_LONG)
                       .show()
               }
-              Intent(this, Main_Screen::class.java).apply {
-                  putExtra("USER_ID", 123)
-                  startActivity(this)
-                  finish()
-              }
+
+              val intent = Intent(this, Main_Screen::class.java)
+              startActivity(intent)
+              finish()
 
 
           }
