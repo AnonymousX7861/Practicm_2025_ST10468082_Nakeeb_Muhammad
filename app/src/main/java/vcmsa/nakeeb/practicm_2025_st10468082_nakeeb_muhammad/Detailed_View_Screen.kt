@@ -77,4 +77,3 @@ class Detailed_View_Screen : AppCompatActivity() {
     }
 }
 
-private fun Detailed_View_Screen.ptintln(string: String) {}

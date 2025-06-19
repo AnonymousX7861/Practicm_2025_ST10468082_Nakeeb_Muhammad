@@ -46,7 +46,7 @@ class MainActivity : AppCompatActivity() {
                   Toast.makeText(this, "Please enter username and password", Toast.LENGTH_LONG)
                       .show()
               }
-              intent = Intent(this, Main_Screen::class.java)
+            intent = Intent(this, Main_Screen::class.java)
               startActivity(intent)
               finish()
           }
@@ -54,10 +54,4 @@ class MainActivity : AppCompatActivity() {
     }
 }
 
-private fun MainActivity.Intent(
-    activity: MainActivity,
-    klass: Class<Main_Screen>
-): Intent {
-    TODO("Not yet implemented")
-    return Intent(activity, klass)
-}
+
