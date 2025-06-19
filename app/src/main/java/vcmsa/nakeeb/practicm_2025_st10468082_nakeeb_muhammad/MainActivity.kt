@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity() {
             insets
         } // code starts here
           // main logic
+          // link to backend
           val btnEnter = findViewById<Button>(R.id.btnEnter)
           val edtUsername = findViewById<EditText>(R.id.edtUsername)
           val edtPassword = findViewById<EditText>(R.id.edtPassword)
@@ -38,10 +39,16 @@ class MainActivity : AppCompatActivity() {
               if (username == "admin" && password == "admin") {
                   tvWelcome.text = "Welcome Admin"
               }
-              val intent = Intent(this, Main_Screen::class.java)
+              if (username == "user" && password == "user") {
+                  tvWelcome.text = "Welcome User"
+              }
+              if (username.isEmpty() || password.isEmpty()) {
+                  Toast.makeText(this, "Please enter username and password", Toast.LENGTH_LONG)
+                      .show()
+              }
+              intent = Intent(this, Main_Screen::class.java)
               startActivity(intent)
               finish()
-
           }
 
     }
@@ -49,7 +56,7 @@ class MainActivity : AppCompatActivity() {
 
 private fun MainActivity.Intent(
     activity: MainActivity,
-    klass: Class<Detailed_View_Screen>
+    klass: Class<Main_Screen>
 ): Intent {
     TODO("Not yet implemented")
     return Intent(activity, klass)
