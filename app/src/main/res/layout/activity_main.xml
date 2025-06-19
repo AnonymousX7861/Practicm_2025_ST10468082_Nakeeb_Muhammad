@@ -32,6 +32,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Welcome"
+            android:textColor="#06ADFA"
             android:textSize="34sp"
             android:textStyle="bold|italic"
             app:layout_constraintBottom_toBottomOf="parent"
