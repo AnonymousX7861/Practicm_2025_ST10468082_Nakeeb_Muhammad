@@ -34,22 +34,24 @@ class MainActivity : AppCompatActivity() {
               val username = edtUsername.text.toString()
               val password = edtPassword.text.toString()
               tvWelcome.text = "Welcome $username"
-              edtUsername.text.clear()
-              edtPassword.text.clear()
 
               if (username.isEmpty() || password.isEmpty()) {
-                  Toast.makeText(this, "Please enter username and password", Toast.LENGTH_LONG)
-                      .show()
+                  Toast.makeText(this, "Please enter username and password", Toast.LENGTH_LONG).show()
+
               } else {
                   Toast.makeText(this, "Login successful", Toast.LENGTH_LONG).show()
               }
+              if (username == "admin" && password == "admin") {
+                  Toast.makeText(this, "Login successful", Toast.LENGTH_LONG).show()
+              } else {
+                  Toast.makeText(this, "Login failed", Toast.LENGTH_LONG).show()
+                  edtUsername.text.clear()
+                  edtPassword.text.clear()
+              }
 
               val intent = Intent(this, Main_Screen::class.java)
-                  startActivity(intent)
-                  finish()
-
-
-
+              startActivity(intent)
+              finish()
           }
 
     }

@@ -46,6 +46,7 @@ class Main_Screen : AppCompatActivity() {
               } else {
                   tiedtSongInfo.error = null
               }
+
               for (i in songName.indices) {
                   songName.add(tiedtSongInfo.editText?.text.toString())
                   artistName.add(tiedtSongInfo.editText?.text.toString())
@@ -54,6 +55,7 @@ class Main_Screen : AppCompatActivity() {
               }
 
           }
+
           btnSongInfo.setOnClickListener {
               val intent = Intent(this, Detailed_View_Screen::class.java)
               startActivity(intent)
