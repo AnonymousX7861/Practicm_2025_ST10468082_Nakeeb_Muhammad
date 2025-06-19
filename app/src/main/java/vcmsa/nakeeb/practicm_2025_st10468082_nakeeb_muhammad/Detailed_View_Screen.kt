@@ -22,6 +22,8 @@ class Detailed_View_Screen : AppCompatActivity() {
             insets
         } // code starts here
         // main logic
+        // link to backend of UI
+
         val songName = arrayListOf<String>("Foot Loose", "Fast Lane", "Stereo Hearts", "The Nights")
 
         val artistName =

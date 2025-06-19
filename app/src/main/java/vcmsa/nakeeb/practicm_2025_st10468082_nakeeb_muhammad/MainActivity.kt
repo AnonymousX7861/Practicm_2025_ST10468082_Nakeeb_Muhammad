@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
             insets
         } // code starts here
           // main logic
-          // link to backend
+          // link to backend of UI
           val btnEnter = findViewById<Button>(R.id.btnEnter)
           val edtUsername = findViewById<EditText>(R.id.edtUsername)
           val edtPassword = findViewById<EditText>(R.id.edtPassword)
