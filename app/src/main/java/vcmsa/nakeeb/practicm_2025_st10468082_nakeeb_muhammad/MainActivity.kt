@@ -46,9 +46,10 @@ class MainActivity : AppCompatActivity() {
                   Toast.makeText(this, "Please enter username and password", Toast.LENGTH_LONG)
                       .show()
               }
-            intent = Intent(this, Main_Screen::class.java)
+             intent = Intent(this, Main_Screen::class.java)
               startActivity(intent)
               finish()
+
           }
 
     }
