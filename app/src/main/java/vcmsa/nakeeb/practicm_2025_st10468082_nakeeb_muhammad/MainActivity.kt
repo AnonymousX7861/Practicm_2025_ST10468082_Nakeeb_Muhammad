@@ -36,20 +36,18 @@ class MainActivity : AppCompatActivity() {
               tvWelcome.text = "Welcome $username"
               edtUsername.text.clear()
               edtPassword.text.clear()
-              if (username == "admin" && password == "admin") {
-                  tvWelcome.text = "Welcome Admin"
-              }
-              if (username == "user" && password == "user") {
-                  tvWelcome.text = "Welcome User"
-              }
+
               if (username.isEmpty() || password.isEmpty()) {
                   Toast.makeText(this, "Please enter username and password", Toast.LENGTH_LONG)
                       .show()
+              } else {
+                  Toast.makeText(this, "Login successful", Toast.LENGTH_LONG).show()
               }
 
               val intent = Intent(this, Main_Screen::class.java)
-              startActivity(intent)
-              finish()
+                  startActivity(intent)
+                  finish()
+
 
 
           }

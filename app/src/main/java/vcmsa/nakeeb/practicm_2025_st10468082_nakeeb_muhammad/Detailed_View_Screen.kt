@@ -46,8 +46,6 @@ class Detailed_View_Screen : AppCompatActivity() {
                 } else {
                     mledtSongDetails.setText(songName.toString() + "" + artistName.toString() + "")
                     }
-                println(songName.toString())
-                println(artistName.toString())
 
             }
         }
@@ -61,8 +59,7 @@ class Detailed_View_Screen : AppCompatActivity() {
                 } else {
                     mledtSongDetails.setText(songName.toString() + "" + songRating.toString() + "")
                 }
-                print(songName.toString())
-                print(songRating.toString())
+
             }
 
             btnReturnMenu.setOnClickListener {
